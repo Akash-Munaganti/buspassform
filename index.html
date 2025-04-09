@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusPass Form</title>
+    <style>
+        header{
+            background-color: rgb(167, 185, 212);
+            padding:5px;
+            text-align: center;
+            width:53%;
+            border-radius:15px;
+            margin-bottom: 20px;
+        }
+        legend{
+            background-color: rgba(17, 156, 231, 0.868);
+            margin-top: 10px;
+            padding:5px;
+            border-radius: 3px;
+            color:white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            
+        }
+        fieldset{
+           
+            width:800px;
+            margin: auto;
+            margin-bottom:10px;
+            background-color: rgb(225, 223, 223);
+            
+        }
+        label{
+           margin-left:10px;
+           font-family:Verdana, Geneva, Tahoma, sans-serif;
+          
+           
+        }
+        .styleinput{
+            margin-left:40px;
+            width:200px;
+            height:25px;
+        }
+        span{
+            color: red;
+        }
+        input{
+            margin-left:20px;
+            margin-bottom: 10px;
+        
+        }
+        select{
+            margin-left:40px;
+            width:200px;
+            height:28px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom:10px;
+        }
+       .button{
+        background-color: rgb(250, 110, 243);
+        padding:5px;
+        color:white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        border-radius: 3px;
+        width:100px;
+
+       }
+        div{
+            text-align: center;
+            margin-top: 20px;
+            padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <center><header>
+        <img src="./IMAGES/Screenshot 2025-04-08 205831.png" alt="" height="60px" width="60px">
+        <h2 style="color:blue">TELANGANA ROAD TRANSPORT CORPORATION</h2>
+        <h2>GENERAL BUS PASS APPLICATION</h2>
+    </header></center>
+    <form action="./successpage.html">
+    <fieldset>
+        <legend >Application Details</legend>
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" name="aname" required class="styleinput">
+        <label for="fname">Father Name <span>*</span></label>
+        <input type="text" id="fname" name="fname" required class="styleinput"><br>
+        <label for="dob">Date Of Birth <span>*</span></label>
+        <input type="text" id="dob" name="edob" required class="styleinput">
+        <label for="gender">Gender <span>*</span></label>
+        <input type="radio" id="male" name="ale" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="ale" required>
+        <label for="female">Female</label><br>
+        <label for="age">Age As On <span>*</span></label>
+        <input type="text" id="age" name="ageof" required class="styleinput">
+        <label for="aadhar">Aadhar Number <span>*</span></label>
+        <input type="text" id="aadhar" name="aadharno" required class="styleinput"><br>
+        <label for="whatsapp">WhatsApp Number <span>*</span></label>
+        <input type="text" id="whatsapp" name="whatsappno" required class="styleinput">
+        <label for="emailid">Email ID <span>*</span></label>
+        <input type="email" id="emailid" name="email" required class="styleinput"><br>
+        <label for="photo">Photo <span>*</span></label>
+        <input type="file" access=".img,.png,.jpg">
+    </fieldset>
+    <fieldset>
+        <legend>Residential Address Details</legend>
+        <label for="address">Applicant Address <span>*</span></label>
+        <input type="text" id="address" name="aaddress" required class="styleinput">
+        <label for="district">District <span>*</span></label>
+        <select name="district" id="district">
+          <option value="HYDERABAD" >HYDERABAD</option>
+        </select><br>
+        <label for="mandal">Mandal <span>*</span></label>
+        <select name="district" id="district">
+            <option value="HYDERABAD" >HYDERABAD</option>
+          </select>
+        <label for="village">Village <span>*</span></label>
+        <select name="district" id="district">
+            <option value="HYDERABAD" >HYDERABAD</option>
+          </select><br>
+        <label for="pincode">Pincode <span>*</span></label>
+        <input type="number" id="pincode" name="pincode" class="styleinput">
+    </fieldset>
+    <fieldset>
+        <legend>Pass Type Details</legend>
+        <label for="city">City <span>*</span></label>
+        <select name="city" id="city" >
+            <option value="HYDERABAD" >HYDERABAD</option>
+          </select><br>
+        <label for="passtype">Pass Type <span>*</span></label>
+        <select name="passtype" id="passtype">
+            <option value="-select-"  disabled selected>-select-</option>
+            <option value="Greater Pass">Greater Pass</option>
+            <option value="General Ordinary Route Pass">General Ordinary Route Pass</option>
+            <option value="Metro Express">Metro Express</option>
+            <option value="Metro Deluxe Pass">Metro Deluxe Pass</option>
+          </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mode Of Payment & Pass Collection </legend>
+        <label for="paymode">Payment Mode <span>*</span></label>
+        <select name="paymentmode" id="paymode">
+            <option value="Select Payment Mode " selected >Select Payment Mode </option>
+            <option value="Payment Counter">Payment Counter</option>
+        </select><br>
+        <label for="passmode">Pass Delivery Mode <span>*</span></label>
+        <select name="passdelmode" id="passmode">
+            <option value="Select Pass Delivery Mode " selected >Select Pass Delivery Mode </option>
+            <option value="At Counter">At Counter</option>
+        </select><br>
+        <label for="center">Center at wich you want to collect<span>*</span></label>
+        <select name="center" id="center">
+            <option value="---Select---">---Select---</option>
+            <option value="RTC ABIDS _HYD">RTC ABIDS _HYD</option>
+            <option value="RTC BORABANDA_HYD">RTC BORABANDA_HYD</option>
+            <option value="RTC BALANAGAR_HYD">RTC BALANAGAR_HYD</option>
+            <option value="RTC ECIL_CHARMINAR">RTC ECIL_CHARMINAR</option>
+            <option value="RTC CHARMINAR_HYD">RTC CHARMINAR_HYD</option>
+            <option value="RTC KOTI_HYD">RTC KOTI_HYD</option>
+            <option value="RTC KPHB_HYD">RTC KPHB_HYD</option>
+            <option value="RTC KUKATPALLY_HYD">RTC KUKATPALLY_HYD</option>
+            <option value="RTC AMEERPET_HYD">RTC AMEERPET_HYD</option>
+        </select>
+    </fieldset>
+    <div>
+    <img src="./IMAGES/Screenshot 2025-04-08 205907.png" alt="" width="150px;" height="40px">
+    <img src="https://cdn-icons-png.freepik.com/256/14133/14133986.png?semt=ais_hybrid" alt=""width="40px;" height="40px"><br>
+    <input type="text"><br>
+    <input type="submit" value="Submit" class="button">
+    </div>
+</form>
+</body>
+</html>
